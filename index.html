@@ -12,24 +12,39 @@
 <div class="malla">
 
   <div class="semestre">
-    <h2>Semestre 1</h2>
-    <div class="ramo">Precálculo</div>
-    <div class="ramo">Química</div>
-    <div class="ramo">Biología de la célula</div>
-    <div class="ramo">Morfología humana</div>
-    <div class="ramo">Alimentos</div>
-    <div class="ramo">Introducción a la nutrición</div>
-  </div>
+  <h2>Semestre 1</h2>
+
+  <div class="ramo" data-id="precalculo">Precálculo</div>
+  <div class="ramo" data-id="quimica">Química</div>
+  <div class="ramo" data-id="biocel">Biología de la célula</div>
+  <div class="ramo" data-id="morfo">Morfología humana</div>
+  <div class="ramo" data-id="alimentos">Alimentos</div>
+  <div class="ramo" data-id="intro">Introducción a la nutrición</div>
+</div>
+
 
   <div class="semestre">
-    <h2>Semestre 2</h2>
-    <div class="ramo">Física para nutrición</div>
-    <div class="ramo">Bioquímica general para nutrición</div>
-    <div class="ramo">Fisiología</div>
-    <div class="ramo">Ciencia de los alimentos</div>
-    <div class="ramo">Técnicas dietéticas y planificación alimentaria</div>
+  <h2>Semestre 2</h2>
+
+  <div class="ramo bloqueado" data-id="fisica" data-prereq="precalculo">
+    Física para nutrición
   </div>
 
+  <div class="ramo bloqueado" data-id="bioquimica" data-prereq="quimica">
+    Bioquímica general para nutrición
+  </div>
+
+  <div class="ramo bloqueado" data-id="fisiologia" data-prereq="biocel,morfo">
+    Fisiología
+  </div>
+
+  <div class="ramo bloqueado" data-id="cienciaalimentos" data-prereq="quimica,alimentos">
+    Ciencia de los alimentos
+  </div>
+
+  <div class="ramo bloqueado" data-id="tecnicas" data-prereq="alimentos">
+    Técnicas dietéticas y planificación alimentaria
+  </div>
 </div>
 
 <script src="script.js"></script>
