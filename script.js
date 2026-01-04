@@ -44,4 +44,36 @@ document.addEventListener("DOMContentLoaded", () => {
   actualizarBloqueos(); // estado inicial
 });
 
+// 🔽 EXPORTAR PROGRESO
+document.getElementById("exportar").addEventListener("click", () => {
+  const data = localStorage.getItem("aprobados");
+  const blob = new Blob([data], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "mi_progreso_malla.json";
+  a.click();
+
+  URL.revokeObjectURL(url);
+});
+
+// 🔼 IMPORTAR PROGRESO
+const inputArchivo = document.getElementById("archivo");
+
+document.getElementById("importar").addEventListener("click", () => {
+  inputArchivo.click();
+});
+
+inputArchivo.addEventListener("change", e => {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = () => {
+    localStorage.setItem("aprobados", reader.result);
+    location.reload();
+  };
+  reader.readAsText(file);
+});
 
