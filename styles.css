@@ -24,3 +24,9 @@ body {
   border-radius: 10px;
   font-weight: bold;
 }
+
+.ramo.aprobado {
+  background: #ba68c8;
+  color: white;
+  text-decoration: line-through;
+}
