@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fdecef;
+  text-align: center;
+}
+
+.malla {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.semestre {
+  background: #ffe6f0;
+  padding: 15px;
+  border-radius: 15px;
+  width: 220px;
+}
+
+.ramo {
+  background: #f8bbd0;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
