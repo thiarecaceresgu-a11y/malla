@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
   const ramos = document.querySelectorAll(".ramo");
 
-  ramos.forEach(ramo => {
-    ramo.addEventListener("click", () => {
+  ramos.forEach(function (ramo) {
+    ramo.addEventListener("click", function () {
       ramo.classList.toggle("aprobado");
     });
   });
