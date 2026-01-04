@@ -30,3 +30,8 @@ body {
   color: white;
   text-decoration: line-through;
 }
+.ramo.bloqueado {
+  background: #e0e0e0;
+  color: #777;
+  cursor: not-allowed;
+}
