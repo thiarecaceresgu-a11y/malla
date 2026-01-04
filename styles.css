@@ -69,22 +69,47 @@ h1 {
   color: #9e9e9e;
   cursor: no
 
-  .controles {
-  margin-bottom: 30px;
+ /* 🎀 BARRA DE ACCIONES */
+.controles {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
 }
 
 .controles button {
-  background: #ba68c8;
+  background: linear-gradient(135deg, #ce93d8, #ab47bc);
   color: white;
   border: none;
-  padding: 10px 15px;
-  margin: 5px;
-  border-radius: 10px;
+  padding: 12px 20px;
+  border-radius: 25px;
   font-weight: bold;
+  font-size: 14px;
   cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: transform 0.15s, box-shadow 0.15s;
 }
 
 .controles button:hover {
-  background: #9c27b0;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.controles button:active {
+  transform: scale(0.97);
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .controles {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .controles button {
+    width: 80%;
+    font-size: 15px;
+  }
 }
 
