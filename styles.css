@@ -1,9 +1,18 @@
+/* 🌸 GENERAL */
 body {
-  font-family: Arial, sans-serif;
-  background: #fdecef;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #fdecef, #fce4ec);
+  margin: 0;
+  padding: 30px;
   text-align: center;
 }
 
+h1 {
+  color: #6a1b9a;
+  margin-bottom: 30px;
+}
+
+/* 📚 CONTENEDOR MALLA */
 .malla {
   display: flex;
   flex-wrap: wrap;
@@ -11,28 +20,52 @@ body {
   justify-content: center;
 }
 
+/* 📦 SEMESTRE */
 .semestre {
-  background: #ffe6f0;
+  background: #fff;
+  border-radius: 20px;
   padding: 15px;
-  border-radius: 15px;
-  width: 220px;
+  width: 240px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
 }
 
+.semestre:hover {
+  transform: translateY(-5px);
+}
+
+.semestre h2 {
+  font-size: 18px;
+  color: #ad1457;
+  margin-bottom: 10px;
+}
+
+/* 🧩 RAMOS */
 .ramo {
   background: #f8bbd0;
   margin: 10px 0;
   padding: 10px;
-  border-radius: 10px;
-  font-weight: bold;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
+/* 🩷 NO APROBADO */
+.ramo:hover {
+  filter: brightness(1.05);
+}
+
+/* 💜 APROBADO */
 .ramo.aprobado {
   background: #ba68c8;
   color: white;
   text-decoration: line-through;
 }
+
+/* 🔒 BLOQUEADO */
 .ramo.bloqueado {
   background: #e0e0e0;
-  color: #777;
-  cursor: not-allowed;
-}
+  color: #9e9e9e;
+  cursor: no
+
