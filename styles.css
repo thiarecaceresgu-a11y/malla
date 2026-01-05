@@ -38,7 +38,7 @@ h1 {
   margin-bottom: 15px;
 }
 
-/* 🧩 RAMOS */
+/* 🧩 RAMOS (base) */
 .ramo {
   background: #fff;
   border: 2px dashed #f48fb1;
@@ -51,16 +51,23 @@ h1 {
   transition: all 0.2s ease;
 }
 
-/* 🩷 RAMO NORMAL */
+/* 🩷 RAMO NORMAL / HOVER */
 .ramo:hover {
   background: #fce4ec;
 }
 
+/* 🌸 RAMO DESBLOQUEADO */
+.ramo.desbloqueado {
+  background: #f8bbd0;
+  border-color: #f06292;
+  color: #c2185b;
+}
+
 /* 💜 RAMO APROBADO */
 .ramo.aprobado {
-  background: #ce93d8;
+  background: #e1bee7;
   border-color: #ab47bc;
-  color: white;
+  color: #6a1b9a;
   text-decoration: line-through;
 }
 
