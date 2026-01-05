@@ -56,18 +56,12 @@ h1 {
   background: #fce4ec;
 }
 
-/* 🌸 RAMO DESBLOQUEADO (siempre rosado) */
+/* 🌸 RAMO DESBLOQUEADO */
 .ramo.desbloqueado {
   background: #f8bbd0;
   border-color: #f06292;
   color: #c2185b;
 }
-
-/* 🌸 RAMO DESBLOQUEADO incluso con hover */
-.ramo.desbloqueado:hover {
-  background: #f8bbd0;
-}
-
 
 /* 💜 RAMO APROBADO */
 .ramo.aprobado {
@@ -91,4 +85,5 @@ h1 {
     width: 90%;
   }
 }
+
 
