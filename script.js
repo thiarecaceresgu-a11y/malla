@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     ramos.forEach(ramo => {
 
-      // 🔸 Ramos SIN prerrequisitos → siempre desbloqueados
+      // 👉 Ramos sin prerrequisitos
       if (!ramo.dataset.prereq) {
         ramo.classList.remove("bloqueado");
         ramo.classList.add("desbloqueado");
@@ -24,4 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       const prereqs = ramo.dataset.prereq.split(",");
-      const cumple = prereqs.every(p => aprob
+      const cumple = prereqs.every(p => aprobados.includes(p));
+
+      if (cumple) {
+        ramo.classList.remove("bloqueado");
+        ramo.classList.
+
