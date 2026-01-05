@@ -51,7 +51,7 @@ h1 {
   transition: all 0.2s ease;
 }
 
-/* 🩷 HOVER */
+/* 🩷 RAMO NORMAL / HOVER */
 .ramo:hover {
   background: #fce4ec;
 }
@@ -85,5 +85,3 @@ h1 {
     width: 90%;
   }
 }
-
-
