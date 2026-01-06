@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const ramos = document.querySelectorAll(".ramo");
 
-  // 🔹 Cargar progreso guardado
-  const aprobadosGuardados = JSON.parse(localStorage.getItem("aprobados")) || [];
+  const aprobadosGuardados =
+    JSON.parse(localStorage.getItem("aprobados")) || [];
 
   ramos.forEach(ramo => {
     if (aprobadosGuardados.includes(ramo.dataset.id)) {
@@ -15,11 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
       .map(r => r.dataset.id);
 
     ramos.forEach(ramo => {
-
-      // 👉 Ramos sin prerrequisitos
       if (!ramo.dataset.prereq) {
         ramo.classList.remove("bloqueado");
-        ramo.classList.add("desbloqueado");
         return;
       }
 
@@ -28,5 +25,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (cumple) {
         ramo.classList.remove("bloqueado");
-        ramo.classList.
+      } else {
+        ramo.classList.add("bloqueado");
+        ramo.classList.remove("aprobado");
+      }
+    });
 
+    localStorage.setItem("aprobados", JSON.stringify(aprobados));
+  }
+
+  ramos.forEach(ramo => {
+    ramo.addEventListener("click", () => {
+      if (ramo.classList.contains("bloqueado")) return;
+      ramo.classList.toggle("aprobado");
+      actualizarBloqueos();
+    });
+  });
+
+  actualizarBloqueos();
+});
